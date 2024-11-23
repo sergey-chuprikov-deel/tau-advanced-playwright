@@ -7,7 +7,7 @@ let bookPage: BookPage;
 // First commit
 
 test.beforeEach(async ({ page }) => {
-    bookPage = await hooks.beforeEach(page, bookPage, pages.bookStorePage);
+    bookPage = await hooks.beforeEach(page, BookPage, pages.bookStorePage);
 });
   
 test.describe('Books - Dynamic Page Object Model', () => {

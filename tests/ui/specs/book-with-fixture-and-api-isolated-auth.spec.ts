@@ -30,7 +30,7 @@ test.beforeAll(async ({ playwright }) => {
 });
 
 test.beforeEach(async ({ page }) => {
-  loginPage = await hooks.beforeEach(page, loginPage, pages.loginPage);
+  loginPage = await hooks.beforeEach(page, LoginPage, pages.loginPage);
   await loginPage.doLogin(userName, password);
   await loginPage.checkLoggedIn();
 });
